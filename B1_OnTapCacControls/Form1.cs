@@ -55,9 +55,7 @@ namespace B1_OnTapCacControls
               if(sinhVien!=null)
                 _sinhViens.Add(sinhVien);
                 //    _sinhViens = new List<SinhVien>();
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _sinhViens;
-
+               
             
            
         }
