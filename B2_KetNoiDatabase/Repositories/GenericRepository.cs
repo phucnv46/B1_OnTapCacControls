@@ -1,4 +1,5 @@
-﻿using B2_KetNoiDatabase.Models;
+﻿//using B2_KetNoiDatabase.Models;
+using B2_KetNoiDatabase.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,5 +24,64 @@ namespace B2_KetNoiDatabase.Repositories
         {
             return _dbSet.ToList();
         }
+
+
+        public void Them(T model) // Thêm model vào danh sách
+        {
+            // Code vào đây 
+
+            try
+            {
+                _dbSet.Add(model);
+                _context.SaveChanges(); // Luu thay doi doi voi database
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
+
+        }
+
+
+        public void Update(T model) // Thêm model vào danh sách
+        {
+            // Code vào đây 
+
+            try
+            {
+                _dbSet.Update(model);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Lỗi"); // Hiện lên lỗi
+            }
+
+        }
+
+        public void Delete(params object[] key) // TH key hỗn hợp
+        {
+            //params cho phép truyền không xác đinh số lượng tham số cùng loại
+            //Tìm ra bản ghi cần xoá
+            // Find(key)
+            T deletedObject = _dbSet.Find(key);
+            if (deletedObject == null)
+            {
+                MessageBox.Show("Không tìm thấy đối tượng cần xoá");
+                return;
+            }
+
+            _dbSet.Remove(deletedObject);
+            _context.SaveChanges();
+
+        }
+
+        /* public List<T> TimKiem(string search)
+        {
+           
+        }
+*/
     }
 }

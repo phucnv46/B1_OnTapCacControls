@@ -10,4 +10,6 @@ public partial class PhongBan
     public string? TenPhongBan { get; set; }
 
     public string? TruongPhong { get; set; }
+
+    public virtual ICollection<NhanVien> NhanViens { get; set; } = new List<NhanVien>();
 }

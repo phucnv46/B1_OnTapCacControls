@@ -48,6 +48,10 @@ public partial class TutorNet1021Context : DbContext
             entity.Property(e => e.NgaySinh).HasColumnType("datetime");
             entity.Property(e => e.NgayVaoLamViec).HasColumnType("datetime");
 
+            entity.HasOne(d => d.MaPhongBanNavigation).WithMany(p => p.NhanViens)
+                .HasForeignKey(d => d.MaPhongBan)
+                .HasConstraintName("FK_NhanVien_PhongBan");
+
             entity.HasOne(d => d.MaVaiTroNavigation).WithMany(p => p.NhanViens)
                 .HasForeignKey(d => d.MaVaiTro)
                 .OnDelete(DeleteBehavior.Cascade)
