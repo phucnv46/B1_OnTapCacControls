@@ -27,13 +27,16 @@ namespace B2_KetNoiDatabase
 
         private void LoadTableNhanVien()
         {
-            _nhanViens = new BindingList<NhanVien>(_NhanVienRepository.LayList());
+            _nhanViens = new BindingList<NhanVien>(_NhanVienRepository.LayDSKemCacQuanHe("MaPhongBanNavigation", "MaVaiTroNavigation"));
             dataGridView1.DataSource = _nhanViens;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dataGridView1.Columns[nameof(NhanVien.MaVaiTro)].Visible = false;
+            dataGridView1.Columns[nameof(NhanVien.MaPhongBan)].Visible = false;
 
             comboBoxVT.DataSource = _vaiTroRepository.LayList();
             comboBoxVT.DisplayMember = nameof(VaiTro.TenVaiTro);

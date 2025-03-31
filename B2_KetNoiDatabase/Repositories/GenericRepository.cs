@@ -83,5 +83,16 @@ namespace B2_KetNoiDatabase.Repositories
            
         }
 */
+
+        public List<T> LayDSKemCacQuanHe(params string[] relationships)
+        {
+            IQueryable<T> query = _dbSet.AsQueryable();
+            foreach (var relations in relationships)
+            {
+               query= query.Include(relations);
+            }
+            return query.ToList();
+        }
+
     }
 }
