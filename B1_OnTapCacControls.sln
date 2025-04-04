@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KetNoiDatabase2", "KetNoiDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B5_DeMau1", "B5_DeMau1\B5_DeMau1.csproj", "{0CF6957F-2B8F-4D83-9753-633156D16A16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B6_ChuaDeMau2", "B6_ChuaDeMau2\B6_ChuaDeMau2.csproj", "{0E519AE7-136D-44F1-8DCF-EC608649EBBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0CF6957F-2B8F-4D83-9753-633156D16A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF6957F-2B8F-4D83-9753-633156D16A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF6957F-2B8F-4D83-9753-633156D16A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E519AE7-136D-44F1-8DCF-EC608649EBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E519AE7-136D-44F1-8DCF-EC608649EBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E519AE7-136D-44F1-8DCF-EC608649EBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E519AE7-136D-44F1-8DCF-EC608649EBBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
